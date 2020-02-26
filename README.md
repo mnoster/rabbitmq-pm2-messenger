@@ -16,3 +16,38 @@ pm2 kill // Kills all running applications.
 pm2 restart // Restarts all running applications.
 pm2 reload // Reloads the app configuration (this comes in handy when you modify your application's environment variables).
 ```
+`pm2 monit` will return a rich set of data around your application's health
+
+`pm2 install pm2-logrotate` will prevent logging all into one file. 
+
+
+#### Install MongoDB on MacOS
+```
+sudo chown -R $(whoami) $(brew --prefix)/*
+
+then
+
+brew tap mongodb/brew
+
+then
+
+brew install mongodb-community@4.2
+
+and
+
+brew services start mongodb-community
+
+or
+
+mongod --config /usr/local/etc/mongod.conf
+
+then
+
+ps aux | grep -v grep | grep mongod
+
+and
+
+mongo
+
+to verify you can run show dbs in the mongo shell
+```
