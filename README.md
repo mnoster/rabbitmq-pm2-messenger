@@ -24,30 +24,11 @@ pm2 reload // Reloads the app configuration (this comes in handy when you modify
 #### Install MongoDB on MacOS
 ```
 sudo chown -R $(whoami) $(brew --prefix)/*
-
-then
-
 brew tap mongodb/brew
-
-then
-
 brew install mongodb-community@4.2
-
-and
-
 brew services start mongodb-community
-
-or
-
 mongod --config /usr/local/etc/mongod.conf
-
-then
-
 ps aux | grep -v grep | grep mongod
-
-and
-
 mongo
-
-to verify you can run show dbs in the mongo shell
+# to verify you can run show dbs in the mongo shell
 ```
